@@ -1,0 +1,115 @@
+[
+  {
+      "name": "run_dota",
+      "description": "Starts Dota 2. Start this function if I say that I would like to suck to somebody"
+  },
+  {
+      "name": "dota_stats",
+      "description": "Opens Dotabuff page for the user's Dota 2 profile stats"
+  },
+  {
+      "name": "open_website",
+      "description": "Starts Google Chrome and then opens the website. Give the link as a parameter.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "website": {
+                    "type": "string",
+                    "description": "The website link"
+                }
+            },
+            "required": ["website"]
+        }
+  },
+  {
+      "name": "start_factorio",
+      "description": "Starts Factorio game"
+  },
+  {
+      "name": "start_steam",
+        "description": "Starts Steam"
+  },
+  {
+      "name": "start_discord",
+        "description": "Starts Discord"
+  },
+  {
+      "name": "start_spotify",
+        "description": "Starts Spotify"
+  },
+  {
+      "name": "start_teams",
+        "description": "Starts Microsoft Teams"
+  },
+  {
+      "name": "start_telegram",
+        "description": "Starts Telegram"
+  },
+  {
+      "name": "start_outlook",
+        "description": "Starts Microsoft Outlook"
+  },
+  {
+      "name": "start_webstorm",
+        "description": "Starts WebStorm"
+  },
+  {
+      "name": "start_pycharm",
+        "description": "Starts PyCharm"
+  },
+  {
+      "name": "start_epic_games",
+        "description": "Starts Epic Games Launcher"
+  },
+  {
+      "name": "start_multiple_functions",
+        "description": "Starts multiple functions. Use this function if you want to start multiple functions.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "functions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "run_dota",
+                            "start_factorio",
+                            "start_steam",
+                            "start_discord",
+                            "start_spotify",
+                            "start_epic_games",
+                            "dota_stats",
+                            "open_website",
+                            "start_teams",
+                            "start_telegram",
+                            "start_outlook",
+                            "start_webstorm",
+                            "start_pycharm"
+                        ]
+                    }
+                },
+                "website": {
+                    "type": "string",
+                    "description": "The website link"
+                }
+            },
+            "required": ["functions"]
+        }
+  },
+  {
+      "name": "work_mode",
+        "description": "Starts programs for work"
+  },
+  {
+      "name": "home_mode",
+        "description": "Starts programs for home. Start it when I also say that I'm home."
+  },
+  {
+      "name": "work_hours",
+        "description": "Opens website in Google Chrome for filling in my work hours"
+  },
+  {
+      "name": "bot_settings",
+        "description": "Opens the settings for the bot"
+  }
+]
