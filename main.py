@@ -108,7 +108,7 @@ class VoiceCommandApp:
             self.label.configure(text="Выполняю...")
             response = await asyncio.to_thread(
                 client.chat.completions.create,
-                model="gpt-4",
+                model="gpt-4o",
                 messages=[{"role": "user", "content": voice_command}],
                 functions=gpt_functions,
                 function_call="auto",
