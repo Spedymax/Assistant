@@ -5,6 +5,7 @@ from pygame import mixer
 from google.cloud import texttospeech
 
 import config
+from security import safe_command
 
 # Configure logging
 logging.basicConfig(filename=config.LOG_FILE, level=config.LOG_LEVEL,
@@ -55,9 +56,9 @@ def run_application(path: str, args: Optional[list] = None) -> None:
     """
     try:
         if args:
-            subprocess.Popen([path] + args)
+            safe_command.run(subprocess.Popen, [path] + args)
         else:
-            subprocess.Popen([path])
+            safe_command.run(subprocess.Popen, [path])
         logger.info(f"Application started: {path}")
     except Exception as e:
         logger.error(f"Error starting application {path}: {e}")
